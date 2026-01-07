@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Páina Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- BOOTSTRAP 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS PERSONALIZADO -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #2c3e50;
+            animation: aparecer 1s ease-in-out;
+        }
+
+        .card {
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary {
+            background-color: #ff5733;
+            border: none;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #c70039;
+            transform: scale(1.1);
+        }
+
+        .form-control {
+            border-radius: 10px;
+        }
+
+        footer {
+            font-size: 14px;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 576px) {
+            body {
+                background-color: #f2f2f2;
+            }
+            h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Mi Página Web Samik</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Servicios locales</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contacto: 0991457331</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ENCABEZADO -->
+<div class="container text-center my-4">
+    <h1>Bienvenido a mi Página Web Responsiva</h1>
+</div>
+
+<!-- GRID -->
+<div class="container my-4">
+    <div class="row text-center">
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow">
+                <img src="https://via.placeholder.com/300" class="card-img-top img-fluid">
+                <div class="card-body">
+                    <h3>Columna 1</h3>
+                    <p>Contenido descriptivo.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow">
+                <img src="https://via.placeholder.com/300" class="card-img-top img-fluid">
+                <div class="card-body">
+                    <h3>Columna 2</h3>
+                    <p>Diseño responsivo.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow">
+                <img src="https://via.placeholder.com/300" class="card-img-top img-fluid">
+                <div class="card-body">
+                    <h3>Columna 3</h3>
+                    <p>Bootstrap 5.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- COLLAPSE -->
+<div class="container text-center my-4">
+    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#info">
+        Mostrar más
+    </button>
+    <div id="info" class="collapse mt-3">
+        <p>Contenido oculto con efecto collapse.</p>
+    </div>
+</div>
+
+<!-- FORMULARIO -->
+<div class="container my-4">
+    <form>
+        <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Nombre">
+        </div>
+        <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Email">
+        </div>
+        <div class="mb-3">
+            <textarea class="form-control" placeholder="Comentarios"></textarea>
+        </div>
+        <button class="btn btn-primary">Enviar</button>
+    </form>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center bg-light p-3">
+    <p>© 2025 | Cornelio Wisum | Instagram</p>
+</footer>
+
+<!-- JS BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

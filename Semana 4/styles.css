@@ -1,0 +1,67 @@
+/* ESTILO GENERAL */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* TITULO */
+h1 {
+    color: #2c3e50;
+    animation: aparecer 1s ease-in-out;
+}
+
+/* TARJETAS */
+.card {
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* BOTÓN PERSONALIZADO */
+.btn-primary {
+    background-color: #ff5733;
+    border: none;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #c70039;
+    transform: scale(1.1);
+}
+
+/* FORMULARIO */
+.form-control {
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    font-size: 14px;
+}
+
+/* ANIMACIÓN */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MEDIA QUERY */
+@media (max-width: 576px) {
+    body {
+        background-color: #f2f2f2;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
+

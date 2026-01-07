@@ -1,70 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>deber semana 3</title>
+    <title>Semana 3 HTML5</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>deber semana 3</h1>
-    <h2>hola Bienvenidos</h2>
-    <h3>hola a todos ustedes amigos</h3>
 
-<p>hola bienvenido al desarrollo de apliciones <strong>web</strong> </p>
-
-<p>este es un parafo de deberes de la semana 3 </p>
+<header>
+    <h1>DEBER SEMANA 3</h1>
+    <p>Uso de <strong>HTML5</strong> con estructura <em>semántica</em></p>
+</header>
 
 <nav>
-     <a href="index.html">inicio</a>
-     <a href="about.html">acerca de</a>l
-     <a href="contacto.html">contacto</a>
+    <a href="#inicio">Inicio</a>
+    <a href="#contenido">Contenido</a>
+    <a href="#contacto">Contacto</a>
 </nav>
-<main>
+
+<main id="inicio">
+
     <section>
-        <h2>seccion 1</h2>
-        <p>contenidos de la seccion 1.</p>
+        <h2>Introducción</h2>
+        <p> BIEN VENIDO A MI PAGINA WEB <strong>HTML</strong>.</p>
     </section>
+
+    <section id="contenido">
+        <article>
+            <h3>Artículo Principal</h3>
+            <p>HTML5 permite una mejor <strong>organización</strong> y <em>estructura</em> del contenido web.</p>
+        </article>
+
+        <h3>Imagen de Google</h3>
+        <img src="imagen/image.png"
+             alt="Logo HTML5">
+
+        <h3>Video</h3>
+        <video controls>
+            <source src="assets/video/video1.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+    </section>
+
     <section>
-        <h2>seccion 2 </h2>
-        <p>contenido de la ceccion 2.</p>
-        </section> 
+        <h2>Listas</h2>
+
+        <h3>Lista Ordenada</h3>
+        <ol>
+            <li>tabla 1</li>
+            <li> tabla 2</li>
+            <li> tabla 3</li>
+        </ol>
+
+        <h3>Lista Desordenada</h3>
+        <ul>
+            <li>contenido 2</li>
+            <li>contenido 3</li>
+            <li>contenido 1</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tabla</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tecnología</th>
+                    <th>Función</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HTML</td>
+                    <td>Estructura</td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>Diseño</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>Interactividad</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="contacto">
+        <h2>Formulario</h2>
+        <form>
+            <label>Nombre:</label><br>
+            <input type="text" required><br><br>
+
+            <label>Correo:</label><br>
+            <input type="email" required><br><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Enlace Externo</h2>
+        <a href="https://www.github.com" target="_blank">Visitar GitHub</a>
+    </section>
+
 </main>
 
-<article>
-    <h2>articulos del deber semana 3</h2>
-    <p>este articulo contiene informacion relevante sobre el deber de la semana 3</p>
-</article>
-<ul>
-    <li>elementos de listas 1</hi>
-    <li>elementos de la lista 2</li>
-    <li>elementos de la lista 3</li> 
-
-</ul>
-
-<ol>
-    <li>primer elemento ordenado</li>
-    <li>segundo elemento ordenado</li>
-    <li>tercer elemento ordenado</li>
-</ol>
-
-
-<img width="200px"src="imagen/image.png" alt="">
-<table>
-
-<iframe width="450"height="315" src="<iframe width="560" height="315" src="https://www.youtube.com/embed/AguFtUVj0ZE?si=4Hj02XQVcSJlOhCg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    
-<table border="">
-
-<tr>
-    <th>encabezado 1</th>
-    <th>encabezado 2</th>
-    <th>encabezado 3</th>
-</tr>
-</tr>
-     <td>dato 1</td>
-     <td>dato 2</td>
-     <td>dato 3</td>
-     
+<footer>
+    <p>© 2025 - Semana 3 HTML5</p>
+</footer>
 
 </body>
 </html>
