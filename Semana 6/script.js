@@ -1,0 +1,94 @@
+const nombre = document.getElementById("nombre");
+const correo = document.getElementById("correo");
+const password = document.getElementById("password");
+const confirmar = document.getElementById("confirmar");
+const edad = document.getElementById("edad");
+const enviar = document.getElementById("enviar");
+
+function validarNombre() {
+    if (nombre.value.length >= 3) {
+        nombre.className = "valido";
+        errorNombre.textContent = "";
+        return true;
+    } else {
+        nombre.className = "invalido";
+        errorNombre.textContent = "Mínimo 3 caracteres";
+        return false;
+    }
+}
+
+function validarCorreo() {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (regex.test(correo.value)) {
+        correo.className = "valido";
+        errorCorreo.textContent = "";
+        return true;
+    } else {
+        correo.className = "invalido";
+        errorCorreo.textContent = "Correo electrónico inválido";
+        return false;
+    }
+}
+
+function validarPassword() {
+    const regex = /^(?=.*\d)(?=.*[\W_]).{8,}$/;
+    if (regex.test(password.value)) {
+        password.className = "valido";
+        errorPassword.textContent = "";
+        return true;
+    } else {
+        password.className = "invalido";
+        errorPassword.textContent = "Debe tener 8 caracteres, un número y un símbolo";
+        return false;
+    }
+}
+
+function validarConfirmar() {
+    if (password.value === confirmar.value && confirmar.value !== "") {
+        confirmar.className = "valido";
+        errorConfirmar.textContent = "";
+        return true;
+    } else {
+        confirmar.className = "invalido";
+        errorConfirmar.textContent = "Las contraseñas no coinciden";
+        return false;
+    }
+}
+
+function validarEdad() {
+    if (edad.value >= 18) {
+        edad.className = "valido";
+        errorEdad.textContent = "";
+        return true;
+    } else {
+        edad.className = "invalido";
+        errorEdad.textContent = "Debe ser mayor de 18 años";
+        return false;
+    }
+}
+
+function validarFormulario() {
+    if (
+        validarNombre() &&
+        validarCorreo() &&
+        validarPassword() &&
+        validarConfirmar() &&
+        validarEdad()
+    ) {
+        enviar.disabled = false;
+    } else {
+        enviar.disabled = true;
+    }
+}
+
+nombre.addEventListener("input", validarFormulario);
+correo.addEventListener("input", validarFormulario);
+password.addEventListener("input", validarFormulario);
+confirmar.addEventListener("input", validarFormulario);
+edad.addEventListener("input", validarFormulario);
+
+document.getElementById("formulario").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Formulario validado correctamente ");
+});
+
