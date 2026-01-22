@@ -2,33 +2,33 @@
 let productos = [
     {
         nombre: "Cuaderno",
-        precio: 2.50,
-        descripcion: "Cuaderno de 100 hojas"
+        precio: "$2.500",
+        descripcion: "Cuaderno universitario de 100 hojas"
     },
     {
         nombre: "Lápiz",
-        precio: 0.50,
-        descripcion: "Lápiz de grafito"
+        precio: "$3.50",
+        descripcion: "Lápiz de grafito HB"
     },
     {
-        nombre: "Borrador",
-        precio: 0.30,
-        descripcion: "Borrador blanco"
+        nombre: "Mochila",
+        precio: "$15.00",
+        descripcion: "Mochila escolar resistente"
     }
 ];
 
-// Referencia al elemento UL
+// Referencia al UL
 const lista = document.getElementById("listaProductos");
 
-// Función para renderizar los productos
+// Función para renderizar productos
 function mostrarProductos() {
-    lista.innerHTML = ""; // Limpiar la lista
+    lista.innerHTML = "";
 
     productos.forEach(producto => {
         const li = document.createElement("li");
         li.innerHTML = `
             <strong>${producto.nombre}</strong><br>
-            Precio: $${producto.precio}<br>
+            Precio: ${producto.precio}<br>
             ${producto.descripcion}
         `;
         lista.appendChild(li);
@@ -38,12 +38,12 @@ function mostrarProductos() {
 // Mostrar productos al cargar la página
 mostrarProductos();
 
-// Botón para agregar un nuevo producto
-document.getElementById("btnAgregar").addEventListener("click", () => {
+// Botón para agregar nuevo producto
+document.getElementById("agregarProducto").addEventListener("click", () => {
     const nuevoProducto = {
-        nombre: "Producto Nuevo",
-        precio: 1.00,
-        descripcion: "Descripción del nuevo producto"
+        nombre: "Carro",
+        precio: "$5.000",
+        descripcion: "compra de un vehiculo"
     };
 
     productos.push(nuevoProducto);
